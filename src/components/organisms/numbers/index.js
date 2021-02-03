@@ -8,7 +8,7 @@ function Numbers() {
       style={{
         height: "100%",
         display: "grid",
-        gridTemplateRows: `56px 64px`,
+        gridTemplateRows: "48px 64px",
         gridTemplateColumns: `calc(100% / 3)`,
         gridTemplate: `
             'title title title' 

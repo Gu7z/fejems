@@ -3,6 +3,7 @@ import React from "react";
 import { HomeAbout } from "../organisms/home_about";
 import Numbers from "../organisms/numbers";
 import History from "../organisms/history";
+import Solutions from "../organisms/solutions";
 
 const useStyles = makeStyles({
   root: {
@@ -25,7 +26,7 @@ function Homes() {
       <HomeAbout />
       <Numbers />
       <History />
-      {/* <Solutions /> */}
+      <Solutions />
     </div>
   );
 }
