@@ -14,7 +14,6 @@ function Numbers() {
             'title title title' 
             'sub1 sub2 sub3' 
         `,
-        marginTop: 50,
         placeItems: "center",
       }}
     >
