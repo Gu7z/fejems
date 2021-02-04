@@ -1,10 +1,7 @@
 import React from "react";
-import { Box, Typography, useMediaQuery, useTheme } from "@material-ui/core";
+import { Box, Typography } from "@material-ui/core";
 
 function Solutions({ addRefs }) {
-  const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.up("sm"));
-
   return (
     <Box
       display="flex"
