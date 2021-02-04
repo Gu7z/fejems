@@ -4,6 +4,7 @@ import { Box, Typography } from "@material-ui/core";
 function Solutions() {
   return (
     <Box
+      gridArea="solutions"
       style={{
         height: "100%",
         display: "grid",
@@ -14,6 +15,7 @@ function Solutions() {
     `,
         placeItems: "center",
         color: "#222",
+        marginBottom: "64px",
       }}
     >
       <Box

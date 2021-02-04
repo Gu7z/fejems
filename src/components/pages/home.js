@@ -4,18 +4,12 @@ import { HomeAbout } from "../organisms/home_about";
 import Numbers from "../organisms/numbers";
 import History from "../organisms/history";
 import Solutions from "../organisms/solutions";
+import Contact from "../organisms/contact";
 
 const useStyles = makeStyles({
   root: {
-    display: "grid",
-    gridTemplateRows: "100vh 224px 824px 0 0",
-    gridTemplateAreas: `
-    'about'
-    'numbers'
-    'history'
-    'solutions'
-    'contact'
-    `,
+    display: "flex",
+    flexDirection: "column",
   },
 });
 
@@ -27,6 +21,7 @@ function Homes() {
       <Numbers />
       <History />
       <Solutions />
+      <Contact />
     </div>
   );
 }

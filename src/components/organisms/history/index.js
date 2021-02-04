@@ -29,7 +29,7 @@ function History() {
           backgroundColor: "rgba(0,0,0,.6)",
         }}
       >
-        <Box gridArea="first" textAlign="center">
+        <Box gridArea="first" textAlign="center" marginTop="32px">
           <Typography style={{ fontSize: 32, fontWeight: 900 }}>
             ESSA É A NOSSA HISTÓRIA
           </Typography>
@@ -69,7 +69,13 @@ function History() {
             </Typography>
           </Box>
         </Box>
-        <Box gridArea="fourth" textAlign="center" fontSize="40px" width={600}>
+        <Box
+          marginBottom="32px"
+          gridArea="fourth"
+          textAlign="center"
+          fontSize="40px"
+          width={600}
+        >
           UMA PAIXÃO QUE NOS UNE UM MOVIMENTO QUE NOS TRANSFORMA
         </Box>
       </Box>

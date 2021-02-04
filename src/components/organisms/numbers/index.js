@@ -4,76 +4,69 @@ import { Box, Typography } from "@material-ui/core";
 function Numbers() {
   return (
     <Box
-      gridArea="numbers"
       style={{
-        height: "100%",
-        display: "grid",
-        gridTemplateRows: "48px 64px",
-        gridTemplateColumns: `calc(100% / 3)`,
-        gridTemplate: `
-            'title title title' 
-            'sub1 sub2 sub3' 
-        `,
+        height: "256px",
+        width: "100%",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
         placeItems: "center",
       }}
     >
-      <Box gridArea="title">
-        <Typography
-          style={{ fontSize: 32, fontWeight: 900, fontFamily: "Nunito" }}
-        >
+      <Box>
+        <Typography style={{ fontSize: 32, fontWeight: 900 }}>
           NÚMEROS DA NOSSA FEDERAÇÃO
         </Typography>
       </Box>
-      <Box gridArea="sub1" display="flex" alignItems="flex-end">
-        <div
-          style={{
-            marginRight: 8,
-            fontSize: 24,
-            fontWeight: 900,
-            fontFamily: "Nunito",
-          }}
-        >
-          26
-        </div>
-        <Typography
-          style={{ color: "#0e60c6", fontSize: 16, fontFamily: "Nunito" }}
-        >
-          EMPRESAS JUNIORES
-        </Typography>
-      </Box>
-      <Box gridArea="sub2" display="flex" alignItems="flex-end">
-        <div
-          style={{
-            marginRight: 8,
-            fontSize: 24,
-            fontWeight: 900,
-            fontFamily: "Nunito",
-          }}
-        >
-          +400
-        </div>
-        <Typography
-          style={{ color: "#0e60c6", fontSize: 16, fontFamily: "Nunito" }}
-        >
-          EMPRESÁRIOS JUNIORES
-        </Typography>
-      </Box>
-      <Box gridArea="sub3" display="flex" alignItems="flex-end">
-        <div
-          style={{
-            marginRight: 8,
-            fontSize: 24,
-            fontWeight: 900,
-            fontFamily: "Nunito",
-          }}
-        >
-          5
-        </div>
-        <Typography
-          style={{ color: "#0e60c6", fontSize: 16, fontFamily: "Nunito" }}
-        >
-          INSTITUIÇÕES DE ENSINO
-        </Typography>
+      <Box
+        display="flex"
+        width="800px"
+        justifyContent="space-between"
+        padding="24px"
+      >
+        <Box display="flex" alignItems="flex-end">
+          <div
+            style={{
+              marginRight: 8,
+              fontSize: 24,
+              fontWeight: 900,
+            }}
+          >
+            26
+          </div>
+          <Typography style={{ color: "#0e60c6", fontSize: 16 }}>
+            EMPRESAS JUNIORES
+          </Typography>
+        </Box>
+        <Box display="flex" alignItems="flex-end">
+          <div
+            style={{
+              marginRight: 8,
+              fontSize: 24,
+              fontWeight: 900,
+            }}
+          >
+            +400
+          </div>
+          <Typography style={{ color: "#0e60c6", fontSize: 16 }}>
+            EMPRESÁRIOS JUNIORES
+          </Typography>
+        </Box>
+        <Box display="flex" alignItems="flex-end">
+          <div
+            style={{
+              marginRight: 8,
+              fontSize: 24,
+              fontWeight: 900,
+            }}
+          >
+            5
+          </div>
+          <Typography style={{ color: "#0e60c6", fontSize: 16 }}>
+            INSTITUIÇÕES DE ENSINO
+          </Typography>
+        </Box>
       </Box>
     </Box>
   );
