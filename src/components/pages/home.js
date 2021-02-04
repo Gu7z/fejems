@@ -30,7 +30,7 @@ function Homes() {
         elem.scrollIntoView({ behavior: "smooth" });
       }
     }
-  }, []);
+  }, [location]);
 
   return (
     <div className={styles.root}>
