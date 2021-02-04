@@ -24,11 +24,12 @@ function Numbers({ addRefs }) {
       <Box
         display="flex"
         alignItems="center"
-        flexDirection="column"
-        justifyContent="center"
+        flexDirection="row"
+        justifyContent="space-around"
+        width="100%"
         maxWidth="800px"
         flexWrap="wrap"
-        padding="24px"
+        marginTop="24px"
       >
         <Box display="flex" alignItems="flex-end">
           <div
