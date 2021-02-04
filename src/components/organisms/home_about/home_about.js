@@ -70,14 +70,24 @@ function HomeAbout({ addRefs, elements }) {
             </Typography>
           </Box>
           <Box marginTop={5}>
-            <Typography style={{ fontSize: "130%", maxWidth: 600 }}>
+            <Typography
+              style={{ fontSize: "130%", maxWidth: 600, fontFamily: "Arial" }}
+            >
               Alunos e alunas de graduação, das melhores Universidades do Mato
               Grosso do Sul, comprometidos e capazes para tornar seu sonho
               realidade!
             </Typography>
           </Box>
           <Box marginTop={3} marginBottom={3}>
-            <Button variant="outlined" className={styles.root}>
+            <Button
+              onClick={() =>
+                elements.current[elements.current.length - 1].scrollIntoView({
+                  behavior: "smooth",
+                })
+              }
+              variant="outlined"
+              className={styles.root}
+            >
               CONTRATE UMA EMPRESA JÚNIOR
             </Button>
           </Box>

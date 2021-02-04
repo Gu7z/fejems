@@ -24,7 +24,7 @@ function Homes() {
   return (
     <div className={styles.root}>
       <HomeAbout addRefs={addRef} elements={refs} />
-      <Numbers addRefs={addRef} />
+      <Numbers />
       <History addRefs={addRef} />
       <Solutions addRefs={addRef} />
       <Contact addRefs={addRef} />

@@ -25,17 +25,15 @@ function SideBar({ elements, open, setClose }) {
         onKeyDown={setClose}
       >
         <List>
-          {["Home", "Numeros", "Quem Somos", "Serviços", "Contato"].map(
-            (text, index) => (
-              <div key={`${text}-${index}`}>
-                <ListItem onClick={() => scrollTo(index)} button key={text}>
-                  <ListItemIcon>{null}</ListItemIcon>
-                  <ListItemText primary={text} />
-                </ListItem>
-                <Divider />
-              </div>
-            )
-          )}
+          {["Home", "Quem Somos", "Serviços", "Contato"].map((text, index) => (
+            <div key={`${text}-${index}`}>
+              <ListItem onClick={() => scrollTo(index)} button key={text}>
+                <ListItemIcon>{null}</ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItem>
+              <Divider />
+            </div>
+          ))}
         </List>
       </div>
     </Drawer>

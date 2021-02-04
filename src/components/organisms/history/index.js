@@ -10,7 +10,6 @@ function History({ addRefs }) {
     <Box
       id="Servicos"
       ref={addRefs}
-      gridArea="history"
       style={{
         display: "flex",
         background: `url(${BackgroundHistory}) `,
@@ -33,10 +32,10 @@ function History({ addRefs }) {
         <Box
           style={{
             width: "100%",
-            maxWidth: matches && 600,
+            maxWidth: matches && 1000,
           }}
         >
-          <Box gridArea="first" textAlign="center" marginTop="32px">
+          <Box textAlign="center" marginTop="32px">
             <Typography
               style={{ fontSize: matches ? 32 : 16, fontWeight: 900 }}
             >
@@ -62,7 +61,7 @@ function History({ addRefs }) {
             alignItems="flex-start"
             justifyContent="center"
           >
-            <Box gridArea="second" textAlign="center" width="50%">
+            <Box textAlign="center" width="50%">
               <Typography style={{ fontSize: 32, fontWeight: 900 }}>
                 MISSÃO
               </Typography>
@@ -74,7 +73,7 @@ function History({ addRefs }) {
                 </Typography>
               </Box>
             </Box>
-            <Box gridArea="thrd" textAlign="center" width="50%">
+            <Box textAlign="center" width="50%">
               <Typography style={{ fontSize: 32, fontWeight: 900 }}>
                 VISÃO
               </Typography>
@@ -88,15 +87,18 @@ function History({ addRefs }) {
             </Box>
           </Box>
           <Box
+            display="flex"
+            justifyContent="center"
             marginBottom={8}
-            gridArea="fourth"
-            textAlign="center"
-            fontSize="40px"
             maxWidth="100%"
-            width={600}
             marginTop={3}
           >
-            UMA PAIXÃO QUE NOS UNE UM MOVIMENTO QUE NOS TRANSFORMA
+            <Typography
+              width={600}
+              style={{ fontSize: 40, textAlign: "center" }}
+            >
+              UMA PAIXÃO QUE NOS UNE UM MOVIMENTO QUE NOS TRANSFORMA
+            </Typography>
           </Box>
         </Box>
       </Box>

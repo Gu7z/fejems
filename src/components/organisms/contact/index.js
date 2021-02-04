@@ -2,7 +2,8 @@ import { Box, Button, Typography } from "@material-ui/core";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import WhatsAppIcon from "@material-ui/icons/WhatsApp";
-import EmailIcon from "@material-ui/icons/Email";
+import InstagramIcon from "@material-ui/icons/Instagram";
+// import EmailIcon from "@material-ui/icons/Email";
 import React from "react";
 
 function contact({ addRefs }) {
@@ -22,6 +23,7 @@ function contact({ addRefs }) {
           display: "flex",
           flexWrap: "wrap",
           justifyContent: "center",
+          maxWidth: 1000,
         }}
       >
         <Box
@@ -30,7 +32,7 @@ function contact({ addRefs }) {
           flexDirection="column"
           justifyContent="center"
           alignItems="center"
-          width="50%"
+          width="40%"
         >
           <Box
             component={Typography}
@@ -58,10 +60,34 @@ function contact({ addRefs }) {
             justifyContent="space-around"
             color="white"
           >
-            <FacebookIcon fontSize="large" style={{ cursor: "pointer" }} />
-            <LinkedInIcon fontSize="large" style={{ cursor: "pointer" }} />
-            <WhatsAppIcon fontSize="large" style={{ cursor: "pointer" }} />
-            <EmailIcon fontSize="large" style={{ cursor: "pointer" }} />
+            <FacebookIcon
+              onClick={() => window.open("https://pt-br.facebook.com/fejems/")}
+              fontSize="large"
+              style={{ cursor: "pointer" }}
+            />
+            <LinkedInIcon
+              onClick={() =>
+                window.open(
+                  "https://www.linkedin.com/in/victor-genari-a7569b14b/"
+                )
+              }
+              fontSize="large"
+              style={{ cursor: "pointer" }}
+            />
+            <WhatsAppIcon
+              onClick={() =>
+                window.open(
+                  "whatsapp://send/?phone=6798133574&text=Oi! Vim falar da EJ :)."
+                )
+              }
+              fontSize="large"
+              style={{ cursor: "pointer" }}
+            />
+            <InstagramIcon
+              onClick={() => window.open("https://www.instagram.com/fejems/")}
+              fontSize="large"
+              style={{ cursor: "pointer" }}
+            />
           </Box>
         </Box>
         <Box
@@ -73,15 +99,33 @@ function contact({ addRefs }) {
           alignItems="center"
           onSubmit={(event) => event.preventDefault()}
         >
-          <Box display="flex" flexDirection="column" marginTop={3}>
+          <Box
+            display="flex"
+            width={500}
+            maxWidth="95vw"
+            flexDirection="column"
+            marginTop={3}
+          >
             Nome
             <Box fontSize={20} component="input" height={40} />
           </Box>
-          <Box display="flex" flexDirection="column" marginTop={3}>
+          <Box
+            display="flex"
+            width={500}
+            maxWidth="95vw"
+            flexDirection="column"
+            marginTop={3}
+          >
             Email
             <Box fontSize={20} component="input" height={40} />
           </Box>
-          <Box display="flex" flexDirection="column" marginTop={3}>
+          <Box
+            display="flex"
+            width={500}
+            maxWidth="95vw"
+            flexDirection="column"
+            marginTop={3}
+          >
             Mensagem
             <Box
               fontSize={20}

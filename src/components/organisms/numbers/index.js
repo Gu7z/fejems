@@ -1,11 +1,10 @@
 import React from "react";
 import { Box, Typography } from "@material-ui/core";
 
-function Numbers({ addRefs }) {
+function Numbers() {
   return (
     <Box
       id="Numbers"
-      ref={addRefs}
       style={{
         minHeight: "256px",
         width: "100%",

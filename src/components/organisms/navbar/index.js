@@ -97,9 +97,10 @@ function Navbar({ elements }) {
         </div>
         {matches ? (
           <div style={{ display: "flex" }}>
-            {["Home", "Numeros", "Quem Somos", "Serviços", "Contato"].map(
+            {["Home", "Quem Somos", "Serviços", "Contato"].map(
               (text, index) => (
                 <Typography
+                  key={index}
                   onClick={() => scrollTo(index)}
                   className={styles.link}
                   style={{
