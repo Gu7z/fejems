@@ -107,6 +107,7 @@ function Navbar({ elements }) {
                     marginRight: 24,
                     color: "white",
                     letterSpacing: "0.2rem",
+                    cursor: "pointer",
                   }}
                 >
                   {text}
