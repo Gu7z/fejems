@@ -63,7 +63,7 @@ function Solutions({ addRefs }) {
         </Box>
         <Box display="flex" flexWrap="wrap" justifyContent="center">
           {values.map(({ title, subTitle }, index) => (
-            <Box key={index} height="178px" flex="1 0 50%">
+            <Box key={`title-${index}`} height="178px" flex="1 0 50%">
               <Typography
                 style={{ fontSize: 24, textAlign: "center", fontWeight: 900 }}
               >

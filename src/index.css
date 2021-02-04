@@ -4,6 +4,12 @@
   src: url("./fonts/nunito/Nunito-ExtraBold.ttf");
 }
 
+@font-face {
+  font-family: "Nunito-Light";
+  font-style: normal;
+  src: url("./fonts/nunito/Nunito-Light.ttf");
+}
+
 body {
   margin: 0;
   font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",

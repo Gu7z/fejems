@@ -8,7 +8,7 @@ function History({ addRefs }) {
 
   return (
     <Box
-      id="Servicos"
+      id="History"
       ref={addRefs}
       style={{
         display: "flex",

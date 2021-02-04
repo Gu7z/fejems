@@ -12,7 +12,7 @@ import {
 } from "@material-ui/core";
 import Logo from "../../../images/logo_fejems.png";
 import MenuIcon from "@material-ui/icons/Menu";
-import SideBar from "../sidebar";
+import SideBar from "../create_ej_sidebar";
 import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles({
@@ -32,48 +32,20 @@ const useStyles = makeStyles({
   link: {
     textDecoration: "none",
     color: "initial",
-
-    // "&:hover": {
-    //   background: "none repeat scroll 0 0 transparent",
-    //   bottom: 0,
-    //   content: "",
-    //   display: "block",
-    //   height: "2px",
-    //   left: "50%",
-    //   position: "absolute",
-    //   transition: "width 0.3s ease 0s, left 0.3s ease 0s",
-    //   width: 0,
-    // },
-    // "&:after:hover": {
-    //   width: "100%",
-    //   left: 0,
-    // },
   },
 });
 
-// a:hover:after {
-//   width: 100%;
-//   left: 0;
-// }
-
-function Navbar({ elements }) {
+function Navbar({ elementsIds }) {
   const [openSideBar, setOpenSideBar] = useState(false);
   const styles = useStyles();
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up("lg"));
   const history = useHistory();
 
-  const scrollTo = (index) => {
-    elements.current[index].scrollIntoView({
-      behavior: "smooth",
-    });
-  };
-
   return (
     <AppBar
       color="transparent"
       style={{
-        gridArea: "header",
         boxShadow: "none",
       }}
       className="app_bar"
@@ -103,13 +75,10 @@ function Navbar({ elements }) {
             {["Home", "Quem Somos", "Serviços", "Contato"].map(
               (text, index) => (
                 <Box key={`navbar-${index}`} display="flex">
-                  {index === elements.current.length - 1 && (
+                  {index === elementsIds.length - 1 && (
                     <Typography
-                      key={index}
-                      onClick={() => history.push("/crie-sua-ej")}
                       className={styles.link}
                       style={{
-                        color: "white",
                         marginRight: 24,
                         letterSpacing: "0.2rem",
                         cursor: "pointer",
@@ -121,10 +90,15 @@ function Navbar({ elements }) {
                     </Typography>
                   )}
                   <Typography
-                    onClick={() => scrollTo(index)}
+                    key={index}
+                    onClick={() => {
+                      history.push({
+                        pathname: "/",
+                        hash: `#${elementsIds[index]}`,
+                      });
+                    }}
                     className={styles.link}
                     style={{
-                      color: "white",
                       marginRight: 24,
                       letterSpacing: "0.2rem",
                       cursor: "pointer",
@@ -140,12 +114,12 @@ function Navbar({ elements }) {
           </div>
         ) : (
           <IconButton onClick={() => setOpenSideBar(true)}>
-            <MenuIcon style={{ color: "white" }} />
+            <MenuIcon />
           </IconButton>
         )}
       </Toolbar>
       <SideBar
-        elements={elements}
+        elementsIds={elementsIds}
         open={openSideBar}
         setClose={() => setOpenSideBar(false)}
       />

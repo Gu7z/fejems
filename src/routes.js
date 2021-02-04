@@ -1,16 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Home } from "./components/pages";
+import CreateEj from "./components/pages/create_ej";
 
 function Routes() {
   return (
     <Router>
       <Switch>
-        <Route path="/about">
-          <div />
-        </Route>
-        <Route path="/users">
-          <div />
+        <Route path="/crie-sua-ej">
+          <CreateEj />
         </Route>
         <Route path="/">
           <Home />
