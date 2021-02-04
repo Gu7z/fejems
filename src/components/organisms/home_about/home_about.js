@@ -1,5 +1,12 @@
 import React from "react";
-import { Box, Button, makeStyles, Typography } from "@material-ui/core";
+import {
+  Box,
+  Button,
+  makeStyles,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@material-ui/core";
 import { NavBar } from "..";
 import BackgroundHome from "../../../images/background_home.jpg";
 
@@ -15,15 +22,19 @@ const useStyles = makeStyles({
 
 function HomeAbout({ addRefs, elements }) {
   const styles = useStyles();
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up("sm"));
+
   return (
     <Box
       id="Home"
       ref={addRefs}
       style={{
+        display: "flex",
         background: `url(${BackgroundHome}) `,
         backgroundSize: "cover",
-        minHeight: "min-content",
-        height: "100vh",
+        minHeight: "100vh",
+        height: "max-content",
         backgroundRepeat: "no-repeat",
         color: "white",
       }}
@@ -33,12 +44,12 @@ function HomeAbout({ addRefs, elements }) {
           backgroundColor: "rgba(0,0,0,.6)",
           margin: 0,
           padding: 0,
-          height: "100vh",
+          minHeight: "100vh",
+          height: "max-content",
           width: "100%",
-          position: "absolute",
         }}
       >
-        <Box style={{ gridArea: "about", marginTop: 40 }}>
+        <Box style={{ gridArea: "about", marginTop: matches ? 40 : 8 }}>
           <NavBar elements={elements} />
         </Box>
         <Box
@@ -49,7 +60,7 @@ function HomeAbout({ addRefs, elements }) {
         >
           <Box
             style={{
-              marginTop: 160,
+              marginTop: matches ? 160 : 8,
             }}
           >
             <Typography
@@ -65,7 +76,7 @@ function HomeAbout({ addRefs, elements }) {
               realidade!
             </Typography>
           </Box>
-          <Box marginTop={3}>
+          <Box marginTop={3} marginBottom={3}>
             <Button variant="outlined" className={styles.root}>
               CONTRATE UMA EMPRESA JÚNIOR
             </Button>

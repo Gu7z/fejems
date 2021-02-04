@@ -17,9 +17,7 @@ function contact({ addRefs }) {
         style={{
           display: "flex",
           flexWrap: "wrap",
-          placeItems: "center",
-          color: "#222",
-          width: "max-content",
+          justifyContent: "center",
         }}
       >
         <Box
@@ -28,7 +26,7 @@ function contact({ addRefs }) {
           flexDirection="column"
           justifyContent="center"
           alignItems="center"
-          width="calc(50% - 32px)"
+          width="50%"
         >
           <Box
             component={Typography}
@@ -55,7 +53,6 @@ function contact({ addRefs }) {
           </Box>
         </Box>
         <Box
-          width="50%"
           color="white"
           component="form"
           display="flex"
@@ -66,24 +63,17 @@ function contact({ addRefs }) {
         >
           <Box display="flex" flexDirection="column" marginTop={3}>
             Nome
-            <Box
-              fontSize={20}
-              component="input"
-              maxWidth={500}
-              width={400}
-              height={40}
-            />
+            <Box fontSize={20} component="input" height={40} />
           </Box>
           <Box display="flex" flexDirection="column" marginTop={3}>
             Email
-            <Box fontSize={20} component="input" width={400} height={40} />
+            <Box fontSize={20} component="input" height={40} />
           </Box>
           <Box display="flex" flexDirection="column" marginTop={3}>
             Mensagem
             <Box
               fontSize={20}
               component="textarea"
-              width={400}
               height={120}
               style={{ resize: "none" }}
             />
@@ -93,6 +83,7 @@ function contact({ addRefs }) {
             color="primary"
             style={{
               marginTop: 24,
+              marginBottom: 24,
               width: 224,
               height: 59,
             }}

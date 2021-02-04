@@ -7,7 +7,7 @@ function Numbers({ addRefs }) {
       id="Numbers"
       ref={addRefs}
       style={{
-        height: "256px",
+        minHeight: "256px",
         width: "100%",
         display: "flex",
         flexDirection: "column",
@@ -16,15 +16,18 @@ function Numbers({ addRefs }) {
         placeItems: "center",
       }}
     >
-      <Box>
+      <Box textAlign="center">
         <Typography style={{ fontSize: 32, fontWeight: 900 }}>
           NÚMEROS DA NOSSA FEDERAÇÃO
         </Typography>
       </Box>
       <Box
         display="flex"
-        width="800px"
-        justifyContent="space-between"
+        alignItems="center"
+        flexDirection="column"
+        justifyContent="center"
+        maxWidth="800px"
+        flexWrap="wrap"
         padding="24px"
       >
         <Box display="flex" alignItems="flex-end">
