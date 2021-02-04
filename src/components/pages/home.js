@@ -25,10 +25,12 @@ function Homes() {
 
   useEffect(() => {
     if (location.hash) {
-      let elem = document.getElementById(location.hash.slice(1));
-      if (elem) {
-        elem.scrollIntoView({ behavior: "smooth" });
-      }
+      setTimeout(() => {
+        let elem = document.getElementById(location.hash.slice(1));
+        if (elem) {
+          elem.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 200);
     }
   }, [location]);
 
