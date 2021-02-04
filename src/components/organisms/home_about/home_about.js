@@ -20,6 +20,7 @@ function HomeAbou() {
       style={{
         background: `url(${BackgroundHome}) `,
         backgroundSize: "cover",
+        minHeight: "min-content",
         height: "100vh",
         backgroundRepeat: "no-repeat",
         color: "white",
@@ -28,8 +29,10 @@ function HomeAbou() {
       <Box
         style={{
           backgroundColor: "rgba(0,0,0,.6)",
+          margin: 0,
+          padding: 0,
           height: "100vh",
-          width: "100vw",
+          width: "100%",
           position: "absolute",
         }}
       >

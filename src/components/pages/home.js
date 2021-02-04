@@ -1,10 +1,14 @@
 import { makeStyles } from "@material-ui/core";
 import React from "react";
 import { HomeAbout } from "../organisms/home_about";
+import Numbers from "../organisms/numbers";
+import History from "../organisms/history";
+import Solutions from "../organisms/solutions";
 
 const useStyles = makeStyles({
   root: {
     display: "grid",
+    gridTemplateRows: "100vh 224px 824px 0 0",
     gridTemplateAreas: `
     'about'
     'numbers'
@@ -20,6 +24,9 @@ function Homes() {
   return (
     <div className={styles.root}>
       <HomeAbout />
+      <Numbers />
+      <History />
+      {/* <Solutions /> */}
     </div>
   );
 }
