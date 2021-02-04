@@ -1,5 +1,5 @@
 import { makeStyles } from "@material-ui/core";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 import { HomeAbout } from "../organisms/home_about";
 import Numbers from "../organisms/numbers";
 import History from "../organisms/history";

@@ -10,7 +10,6 @@ import {
   IconButton,
 } from "@material-ui/core";
 import Logo from "../../../images/logo_fejems.png";
-import { Link } from "react-router-dom";
 import MenuIcon from "@material-ui/icons/Menu";
 import SideBar from "../sidebar";
 
