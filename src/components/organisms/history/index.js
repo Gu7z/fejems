@@ -2,9 +2,11 @@ import React from "react";
 import { Box, Typography } from "@material-ui/core";
 import BackgroundHistory from "../../../images/aula.png";
 
-function History() {
+function History({ addRefs }) {
   return (
     <Box
+      id="Servicos"
+      ref={addRefs}
       gridArea="history"
       style={{
         background: `url(${BackgroundHistory}) `,

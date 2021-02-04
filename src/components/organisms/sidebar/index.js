@@ -8,8 +8,14 @@ import {
   Divider,
 } from "@material-ui/core";
 
-function SideBar({ open, setClose }) {
-  console.log(open);
+function SideBar({ elements, open, setClose }) {
+  const scrollTo = (index) => {
+    setTimeout(() => {
+      elements.current[index].scrollIntoView({
+        behavior: "smooth",
+      });
+    }, 250);
+  };
   return (
     <Drawer anchor="right" open={open} onClose={setClose}>
       <div
@@ -19,15 +25,17 @@ function SideBar({ open, setClose }) {
         onKeyDown={setClose}
       >
         <List>
-          {["Home", "Quem Somos", "Serviços", "Sua ej"].map((text, index) => (
-            <>
-              <ListItem button key={text}>
-                <ListItemIcon>{null}</ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItem>
-              <Divider />
-            </>
-          ))}
+          {["Home", "Numeros", "Quem Somos", "Serviços", "Contato"].map(
+            (text, index) => (
+              <div key={`${text}-${index}`}>
+                <ListItem onClick={() => scrollTo(index)} button key={text}>
+                  <ListItemIcon>{null}</ListItemIcon>
+                  <ListItemText primary={text} />
+                </ListItem>
+                <Divider />
+              </div>
+            )
+          )}
         </List>
       </div>
     </Drawer>

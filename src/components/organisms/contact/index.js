@@ -1,10 +1,11 @@
 import { Box, Button, Typography } from "@material-ui/core";
 import React from "react";
 
-function contact() {
+function contact({ addRefs }) {
   return (
     <Box
-      gridArea="contact"
+      ref={addRefs}
+      id="Contact"
       style={{
         backgroundColor: "#191919",
         minHeight: "560px",

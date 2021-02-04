@@ -55,11 +55,17 @@ const useStyles = makeStyles({
 //   left: 0;
 // }
 
-function Navbar() {
+function Navbar({ elements }) {
   const [openSideBar, setOpenSideBar] = useState(false);
   const styles = useStyles();
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up("lg"));
+
+  const scrollTo = (index) => {
+    elements.current[index].scrollIntoView({
+      behavior: "smooth",
+    });
+  };
 
   return (
     <AppBar
@@ -92,50 +98,21 @@ function Navbar() {
         </div>
         {matches ? (
           <div style={{ display: "flex" }}>
-            <Link className={styles.link}>
-              <Typography
-                style={{
-                  marginRight: 24,
-                  color: "white",
-                  letterSpacing: "0.2rem",
-                }}
-              >
-                HOME
-              </Typography>
-            </Link>
-            <Link className={styles.link}>
-              <Typography
-                style={{
-                  marginRight: 24,
-                  color: "white",
-                  letterSpacing: "0.2rem",
-                }}
-              >
-                QUEM SOMOS
-              </Typography>
-            </Link>
-            <Link className={styles.link}>
-              <Typography
-                style={{
-                  marginRight: 24,
-                  color: "white",
-                  letterSpacing: "0.2rem",
-                }}
-              >
-                CRIE SUA EJ
-              </Typography>
-            </Link>
-            <Link className={styles.link}>
-              <Typography
-                style={{
-                  marginRight: 24,
-                  color: "white",
-                  letterSpacing: "0.2rem",
-                }}
-              >
-                FALE CONOSCO
-              </Typography>
-            </Link>
+            {["Home", "Numeros", "Quem Somos", "Serviços", "Contato"].map(
+              (text, index) => (
+                <Typography
+                  onClick={() => scrollTo(index)}
+                  className={styles.link}
+                  style={{
+                    marginRight: 24,
+                    color: "white",
+                    letterSpacing: "0.2rem",
+                  }}
+                >
+                  {text}
+                </Typography>
+              )
+            )}
           </div>
         ) : (
           <IconButton onClick={() => setOpenSideBar(true)}>
@@ -143,7 +120,11 @@ function Navbar() {
           </IconButton>
         )}
       </Toolbar>
-      <SideBar open={openSideBar} setClose={() => setOpenSideBar(false)} />
+      <SideBar
+        elements={elements}
+        open={openSideBar}
+        setClose={() => setOpenSideBar(false)}
+      />
     </AppBar>
   );
 }

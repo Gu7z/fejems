@@ -13,10 +13,12 @@ const useStyles = makeStyles({
   },
 });
 
-function HomeAbou() {
+function HomeAbout({ addRefs, elements }) {
   const styles = useStyles();
   return (
     <Box
+      id="Home"
+      ref={addRefs}
       style={{
         background: `url(${BackgroundHome}) `,
         backgroundSize: "cover",
@@ -37,7 +39,7 @@ function HomeAbou() {
         }}
       >
         <Box style={{ gridArea: "about", marginTop: 40 }}>
-          <NavBar />
+          <NavBar elements={elements} />
         </Box>
         <Box
           style={{
@@ -74,4 +76,4 @@ function HomeAbou() {
   );
 }
 
-export default HomeAbou;
+export default HomeAbout;

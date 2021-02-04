@@ -1,5 +1,5 @@
 import { makeStyles } from "@material-ui/core";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { HomeAbout } from "../organisms/home_about";
 import Numbers from "../organisms/numbers";
 import History from "../organisms/history";
@@ -15,13 +15,19 @@ const useStyles = makeStyles({
 
 function Homes() {
   const styles = useStyles();
+  const refs = useRef([]);
+
+  const addRef = (newRef) => {
+    refs.current.push(newRef);
+  };
+
   return (
     <div className={styles.root}>
-      <HomeAbout />
-      <Numbers />
-      <History />
-      <Solutions />
-      <Contact />
+      <HomeAbout addRefs={addRef} elements={refs} />
+      <Numbers addRefs={addRef} />
+      <History addRefs={addRef} />
+      <Solutions addRefs={addRef} />
+      <Contact addRefs={addRef} />
     </div>
   );
 }

@@ -1,10 +1,11 @@
 import React from "react";
 import { Box, Typography } from "@material-ui/core";
 
-function Solutions() {
+function Solutions({ addRefs }) {
   return (
     <Box
-      gridArea="solutions"
+      id="Solutions"
+      ref={addRefs}
       style={{
         height: "100%",
         display: "grid",
