@@ -1,4 +1,8 @@
 import { Box, Button, Typography } from "@material-ui/core";
+import FacebookIcon from "@material-ui/icons/Facebook";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import WhatsAppIcon from "@material-ui/icons/WhatsApp";
+import EmailIcon from "@material-ui/icons/Email";
 import React from "react";
 
 function contact({ addRefs }) {
@@ -48,8 +52,16 @@ function contact({ addRefs }) {
           >
             NOS MANDE UMA MENSAGEM E VAMOS BATER UM PAPO (;
           </Box>
-          <Box component={Typography} color="white">
-            Redes sociais aqui em breve
+          <Box
+            width="50%"
+            display="flex"
+            justifyContent="space-around"
+            color="white"
+          >
+            <FacebookIcon fontSize="large" style={{ cursor: "pointer" }} />
+            <LinkedInIcon fontSize="large" style={{ cursor: "pointer" }} />
+            <WhatsAppIcon fontSize="large" style={{ cursor: "pointer" }} />
+            <EmailIcon fontSize="large" style={{ cursor: "pointer" }} />
           </Box>
         </Box>
         <Box
