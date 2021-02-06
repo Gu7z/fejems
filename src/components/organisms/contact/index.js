@@ -154,6 +154,7 @@ function Contact({ addRefs }) {
               fontSize={20}
               component="input"
               height={40}
+              value={form.name}
               onChange={({ target: { value } }) =>
                 setForm({ ...form, name: value })
               }
@@ -171,6 +172,7 @@ function Contact({ addRefs }) {
               fontSize={20}
               component="input"
               height={40}
+              value={form.email}
               onChange={({ target: { value } }) =>
                 setForm({ ...form, email: value })
               }
@@ -189,6 +191,7 @@ function Contact({ addRefs }) {
               component="textarea"
               height={120}
               style={{ resize: "none" }}
+              value={form.message}
               onChange={({ target: { value } }) =>
                 setForm({ ...form, message: value })
               }
