@@ -15,7 +15,7 @@ function Contact({ addRefs }) {
   });
   const { addToast } = useToasts();
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (!form.name.trim() || !form.message.trim() || !form.email.trim()) {
       addToast("Faltam informações no seu formulario!", {
         appearance: "error",
@@ -25,7 +25,10 @@ function Contact({ addRefs }) {
     }
 
     try {
-      const response = axios.post("https://mail-fejems.vercel.app/", form);
+      const response = await axios.post(
+        "https://mail-fejems.vercel.app/",
+        form
+      );
       if (response.data.success) {
         addToast("Email enviado com sucesso!", {
           appearance: "success",
