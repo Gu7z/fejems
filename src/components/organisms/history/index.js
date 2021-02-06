@@ -43,7 +43,7 @@ function History({ addRefs }) {
               ESSA É A NOSSA HISTÓRIA
             </Typography>
             <Box maxWidth="100%" marginTop={2}>
-              <Typography>
+              <Typography style={{ fontFamily: "Nunito-Light" }}>
                 Fundada em 2014, a Federação de Empresas Juniores do estado de
                 Mato Grosso do Sul ou apenas FEJEMS é uma associação que
                 trabalha todos os dias para REPRESENTAR e POTENCIALIZAR às
@@ -62,12 +62,12 @@ function History({ addRefs }) {
             alignItems="flex-start"
             justifyContent="center"
           >
-            <Box textAlign="center" width="50%">
+            <Box textAlign="center" width="calc(50% - 16px)" marginRight="16px">
               <Typography style={{ fontSize: 32, fontWeight: 900 }}>
                 MISSÃO
               </Typography>
               <Box marginTop={2}>
-                <Typography>
+                <Typography style={{ fontFamily: "Nunito-Light" }}>
                   FORMAR LÍDERES que irão transformar o Mato Grosso do Sul,
                   FORTALECENDO e POTENCIALIZANDO o MEJ MS, trabalhando pelo
                   DESENVOLVIMENTO e EXPANSÃO do ecossistema no estado
@@ -79,7 +79,7 @@ function History({ addRefs }) {
                 VISÃO
               </Typography>
               <Box marginTop={2}>
-                <Typography>
+                <Typography style={{ fontFamily: "Nunito-Light" }}>
                   Ser uma federação de ALTO IMPACTO estimulando a CONEXÃO DO
                   ECOSSISTEMA, potencializando a EDUCAÇÃO EMPREENDEDORA e fazer
                   nascer o ORGULHO DE SER CARDUME
@@ -90,13 +90,13 @@ function History({ addRefs }) {
           <Box
             display="flex"
             justifyContent="center"
-            marginBottom={8}
+            marginBottom={4}
             maxWidth="100%"
-            marginTop={3}
+            marginTop={4}
           >
             <Typography
               width={600}
-              style={{ fontSize: 40, textAlign: "center" }}
+              style={{ fontSize: 24, textAlign: "center" }}
             >
               UMA PAIXÃO QUE NOS UNE UM MOVIMENTO QUE NOS TRANSFORMA
             </Typography>
