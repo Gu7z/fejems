@@ -79,6 +79,7 @@ function Solutions({ addRefs, elements }) {
               <Box
                 marginTop="8px"
                 style={{ cursor: "pointer" }}
+                width="max-content"
                 onClick={() => {
                   elements.current[elements.current.length - 1].scrollIntoView({
                     behavior: "smooth",
