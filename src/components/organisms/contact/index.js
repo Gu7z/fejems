@@ -25,11 +25,18 @@ function Contact({ addRefs }) {
     }
 
     try {
-      axios.post("https://mail-fejems.vercel.app/", form);
-      addToast("Email enviado com sucesso!", {
-        appearance: "success",
-        autoDismiss: true,
-      });
+      const response = axios.post("https://mail-fejems.vercel.app/", form);
+      if (response.data.seuccess) {
+        addToast("Email enviado com sucesso!", {
+          appearance: "success",
+          autoDismiss: true,
+        });
+      } else {
+        addToast("Não foi possivel enviar o seu email! :c", {
+          appearance: "error",
+          autoDismiss: true,
+        });
+      }
     } catch {
       addToast("Não foi possivel enviar o seu email! :c", {
         appearance: "error",
