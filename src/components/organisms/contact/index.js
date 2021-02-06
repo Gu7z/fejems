@@ -26,7 +26,7 @@ function Contact({ addRefs }) {
 
     try {
       const response = axios.post("https://mail-fejems.vercel.app/", form);
-      if (response.data.seuccess) {
+      if (response.data.success) {
         addToast("Email enviado com sucesso!", {
           appearance: "success",
           autoDismiss: true,
