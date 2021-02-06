@@ -1,4 +1,5 @@
 import { createMuiTheme, MuiThemeProvider } from "@material-ui/core";
+import { ToastProvider } from "react-toast-notifications";
 import "./App.css";
 import Routes from "./routes";
 
@@ -15,7 +16,9 @@ const THEME = createMuiTheme({
 function App() {
   return (
     <MuiThemeProvider theme={THEME}>
-      <Routes />
+      <ToastProvider>
+        <Routes />
+      </ToastProvider>
     </MuiThemeProvider>
   );
 }

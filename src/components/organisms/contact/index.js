@@ -1,12 +1,48 @@
+import React, { useState } from "react";
 import { Box, Button, Typography } from "@material-ui/core";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 import InstagramIcon from "@material-ui/icons/Instagram";
-// import EmailIcon from "@material-ui/icons/Email";
-import React from "react";
+import { useToasts } from "react-toast-notifications";
+import axios from "axios";
 
-function contact({ addRefs }) {
+function Contact({ addRefs }) {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const { addToast } = useToasts();
+
+  const handleSubmit = () => {
+    if (!form.name.trim() || !form.message.trim() || !form.email.trim()) {
+      addToast("Faltam informações no seu formulario!", {
+        appearance: "error",
+        autoDismiss: true,
+      });
+      return;
+    }
+
+    try {
+      axios.post("https://mail-fejems.vercel.app/", form);
+      addToast("Email enviado com sucesso!", {
+        appearance: "success",
+        autoDismiss: true,
+      });
+    } catch {
+      addToast("Não foi possivel enviar o seu email! :c", {
+        appearance: "error",
+        autoDismiss: true,
+      });
+    }
+    setForm({
+      name: "",
+      email: "",
+      message: "",
+    });
+  };
+
   return (
     <Box
       ref={addRefs}
@@ -107,7 +143,14 @@ function contact({ addRefs }) {
             marginTop={3}
           >
             Nome
-            <Box fontSize={20} component="input" height={40} />
+            <Box
+              fontSize={20}
+              component="input"
+              height={40}
+              onChange={({ target: { value } }) =>
+                setForm({ ...form, name: value })
+              }
+            />
           </Box>
           <Box
             display="flex"
@@ -117,7 +160,14 @@ function contact({ addRefs }) {
             marginTop={3}
           >
             Email
-            <Box fontSize={20} component="input" height={40} />
+            <Box
+              fontSize={20}
+              component="input"
+              height={40}
+              onChange={({ target: { value } }) =>
+                setForm({ ...form, email: value })
+              }
+            />
           </Box>
           <Box
             display="flex"
@@ -132,6 +182,9 @@ function contact({ addRefs }) {
               component="textarea"
               height={120}
               style={{ resize: "none" }}
+              onChange={({ target: { value } }) =>
+                setForm({ ...form, message: value })
+              }
             />
           </Box>
           <Button
@@ -143,6 +196,7 @@ function contact({ addRefs }) {
               width: 224,
               height: 59,
             }}
+            onClick={handleSubmit}
           >
             Enviar
           </Button>
@@ -152,4 +206,4 @@ function contact({ addRefs }) {
   );
 }
 
-export default contact;
+export default Contact;
