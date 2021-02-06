@@ -62,21 +62,22 @@ function Solutions({ addRefs, elements }) {
             PARA QUALQUER PROBLEMA, UMA EMPRESA JÚNIOR PODE SER SOLUÇÃO!
           </Typography>
         </Box>
-        <Box display="flex" flexWrap="wrap" justifyContent="center">
+        <Box display="flex" flexWrap="wrap">
           {values.map(({ title, subTitle }, index) => (
-            <Box key={`title-${index}`} height="178px" flex="1 0 50%">
-              <Typography
-                style={{ fontSize: 24, textAlign: "center", fontWeight: 900 }}
-              >
+            <Box
+              key={`title-${index}`}
+              height="178px"
+              flex="1 0 50%"
+              maxWidth="calc(50% - 8px)"
+              marginRight="8px"
+            >
+              <Typography style={{ fontSize: 24, fontWeight: 900 }}>
                 {title}
               </Typography>
               <Box marginTop={1}>
-                <Typography style={{ textAlign: "center", color: "#888" }}>
-                  {subTitle}
-                </Typography>
+                <Typography style={{ color: "#888" }}>{subTitle}</Typography>
               </Box>
               <Box
-                textAlign="center"
                 marginTop="8px"
                 style={{ cursor: "pointer" }}
                 onClick={() => {
