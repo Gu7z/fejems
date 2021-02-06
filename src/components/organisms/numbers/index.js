@@ -30,7 +30,7 @@ function Numbers() {
         flexWrap="wrap"
         marginTop="24px"
       >
-        <Box display="flex" alignItems="flex-end">
+        <Box display="flex" alignItems="flex-end" marginRight="8px">
           <div
             style={{
               marginRight: 8,
@@ -38,13 +38,13 @@ function Numbers() {
               fontWeight: 900,
             }}
           >
-            26
+            25
           </div>
           <Typography style={{ color: "#0e60c6", fontSize: 16 }}>
             EMPRESAS JUNIORES
           </Typography>
         </Box>
-        <Box display="flex" alignItems="flex-end">
+        <Box display="flex" alignItems="flex-end" marginRight="8px">
           <div
             style={{
               marginRight: 8,
@@ -66,7 +66,7 @@ function Numbers() {
               fontWeight: 900,
             }}
           >
-            5
+            4
           </div>
           <Typography style={{ color: "#0e60c6", fontSize: 16 }}>
             INSTITUIÇÕES DE ENSINO

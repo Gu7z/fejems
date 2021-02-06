@@ -62,14 +62,13 @@ function Solutions({ addRefs, elements }) {
             PARA QUALQUER PROBLEMA, UMA EMPRESA JÚNIOR PODE SER SOLUÇÃO!
           </Typography>
         </Box>
-        <Box display="flex" flexWrap="wrap">
+        <Box display="flex" flexWrap="wrap" maxWidth="100%">
           {values.map(({ title, subTitle }, index) => (
             <Box
               key={`title-${index}`}
-              height="178px"
+              minHeight="max-content"
               flex="1 0 50%"
-              maxWidth="calc(50% - 8px)"
-              marginRight="8px"
+              marginTop="16px"
             >
               <Typography style={{ fontSize: 24, fontWeight: 900 }}>
                 {title}

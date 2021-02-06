@@ -90,15 +90,22 @@ function History({ addRefs }) {
           <Box
             display="flex"
             justifyContent="center"
+            flexDirection="column"
             marginBottom={4}
             maxWidth="100%"
             marginTop={4}
           >
             <Typography
               width={600}
-              style={{ fontSize: 24, textAlign: "center" }}
+              style={{ fontSize: 32, textAlign: "center" }}
             >
-              UMA PAIXÃO QUE NOS UNE UM MOVIMENTO QUE NOS TRANSFORMA
+              UMA PAIXÃO QUE NOS UNE
+            </Typography>
+            <Typography
+              width={600}
+              style={{ fontSize: 32, textAlign: "center", marginTop: 8 }}
+            >
+              UM MOVIMENTO QUE NOS TRANSFORMA
             </Typography>
           </Box>
         </Box>
