@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Typography } from "@material-ui/core";
 
-function Solutions({ addRefs }) {
+function Solutions({ addRefs, elements }) {
   const values = [
     {
       title: "NEGÓCIOS",
@@ -47,7 +47,8 @@ function Solutions({ addRefs }) {
         placeItems: "center",
         color: "#222",
         marginBottom: "64px",
-        width: "100%",
+        width: "calc(100% - 32px)",
+        padding: "0 16px",
       }}
     >
       <Box display="flex" flexDirection="column" maxWidth="1000px">
@@ -73,6 +74,18 @@ function Solutions({ addRefs }) {
                 <Typography style={{ textAlign: "center", color: "#888" }}>
                   {subTitle}
                 </Typography>
+              </Box>
+              <Box
+                textAlign="center"
+                marginTop="8px"
+                style={{ cursor: "pointer" }}
+                onClick={() => {
+                  elements.current[elements.current.length - 1].scrollIntoView({
+                    behavior: "smooth",
+                  });
+                }}
+              >
+                Saiba Mais
               </Box>
             </Box>
           ))}

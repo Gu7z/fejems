@@ -31,7 +31,8 @@ function History({ addRefs }) {
       >
         <Box
           style={{
-            width: "100%",
+            width: "calc(100% - 16px)",
+            padding: "0 16px",
             maxWidth: matches && 1000,
           }}
         >

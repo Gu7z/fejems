@@ -39,7 +39,7 @@ function Homes() {
       <HomeAbout addRefs={addRef} elements={refs} />
       <Numbers />
       <History addRefs={addRef} />
-      <Solutions addRefs={addRef} />
+      <Solutions addRefs={addRef} elements={refs} />
       <Contact addRefs={addRef} />
     </div>
   );
