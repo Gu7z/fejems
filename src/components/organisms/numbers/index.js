@@ -38,7 +38,7 @@ function Numbers() {
               fontWeight: 900,
             }}
           >
-            25
+            31
           </div>
           <Typography style={{ color: "#0e60c6", fontSize: 16 }}>
             EMPRESAS JUNIORES
@@ -52,7 +52,7 @@ function Numbers() {
               fontWeight: 900,
             }}
           >
-            +400
+            +500
           </div>
           <Typography style={{ color: "#0e60c6", fontSize: 16 }}>
             EMPRESÁRIOS JUNIORES
@@ -66,10 +66,24 @@ function Numbers() {
               fontWeight: 900,
             }}
           >
-            4
+            6
           </div>
           <Typography style={{ color: "#0e60c6", fontSize: 16 }}>
             INSTITUIÇÕES DE ENSINO
+          </Typography>
+        </Box>
+        <Box display="flex" alignItems="flex-end">
+          <div
+            style={{
+              marginRight: 8,
+              fontSize: 24,
+              fontWeight: 900,
+            }}
+          >
+            +300
+          </div>
+          <Typography style={{ color: "#0e60c6", fontSize: 16 }}>
+            PROJETOS REALIZADOS
           </Typography>
         </Box>
       </Box>

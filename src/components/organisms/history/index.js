@@ -50,7 +50,7 @@ function History({ addRefs }) {
                 Empresas Juniores que representamos. Formadas por estudantes
                 universitários que realizam projetos e prestam consultoria para
                 os mais diversos tipos de clientes, com preços acessíveis, e
-                qualidade garantida com mais de 400 consultores treinados para
+                qualidade garantida com mais de 500 consultores treinados para
                 atendê-lo!
               </Typography>
             </Box>
